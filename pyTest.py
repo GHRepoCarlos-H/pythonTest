@@ -50,3 +50,14 @@
 #     print(f"After adding {i}, total now is: {total}")
 # print("The sum of all numbers is: ", total)
 
+
+# total=0
+# for i in range(1, 11):
+#     total += i
+#     print({i}, {total})
+# print(total)
+
+fruits = ["apple", "banana", "cherry", "date", "elderberry"]
+
+for fruit in fruits:
+    print(fruit)
