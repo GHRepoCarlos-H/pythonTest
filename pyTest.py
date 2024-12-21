@@ -57,7 +57,40 @@
 #     print({i}, {total})
 # print(total)
 
-fruits = ["apple", "banana", "cherry", "date", "elderberry"]
+# fruits = ["apple", "banana", "cherry", "date", "elderberry"]
 
-for fruit in fruits:
-    print(fruit)
+# for fruit in fruits:
+#     print(fruit)
+
+# for i in range(2, 11, 2):
+#     print(i)
+
+# y=2
+# x=(int(input('Enter a number: ')))
+# z=(x+y)
+# print(f"The total is:", z)
+
+# n1=(int(input('Enter your first number: ')))
+# task=(input("Enter an operator: "))
+# n2=(int(input('Enter your second number: ')))
+# result = eval(f'{n1} {task} {n2}')
+# print(f'your total is: ', result)
+
+while True:
+    n1 = int(input('Enter your first number: '))
+    task = input("Enter an operator (+, -, *, /): ")
+    n2 = int(input('Enter your second number: '))
+
+    try:
+        result = eval(f'{n1} {task} {n2}')
+        print(f'Your total is: {result}')
+    except ZeroDivisionError:
+        print("Error: Division by zero is not allowed.")
+    except:
+        print("Invalid input. Please enter valid numbers and operators.")
+    
+    # Ask if the user wants another calculation
+    again = input("Do you want to perform another calculation? (yes/no): ").strip().lower()
+    if again != 'yes':
+        print("Goodbye!")
+        break
